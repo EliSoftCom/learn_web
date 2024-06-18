@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+        <head>
+            <title>{{ page_title }} </title>
+        </head>
+        <body>
+        <h1>
+        {% if weather %}
+            Погода: {{ weather.temp_C }}, ощущается как: {{ weather.FeelsLikeC }}
+        {% else %}
+            Сервис погоды недопустен
+        {% endif %}
+        </h1>
+        </body>
 </html>
